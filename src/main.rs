@@ -9,7 +9,7 @@ fn main() {
     let pi_c = unsafe { pi_c(iterations) };
     let c_end = c_start.elapsed().unwrap();
 
-    println!("--- C ---\nstart: {}\nduration: {:?}\nresult: {}\n",
+    println!("--- C ---\nstart: {}\nduration: {}\nresult: {}\n",
         humantime::format_rfc3339(c_start),
         humantime::format_duration(c_end),
         pi_c);
