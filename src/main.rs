@@ -1,9 +1,20 @@
 use std::time::SystemTime;
+use raw_cpuid::CpuId;
 
 fn main() {
+
+    println!("System info:");
+    match CpuId::new().get_processor_brand_string() {
+        Some(brand) => println!("CPU:\t{}", brand.as_str()),
+        None => println!("CPU info unknown")
+    }
+    println!("OS:\t{}", std::env::consts::OS);
+    println!("");
+
+
     let iterations = 1_000_000_000;
 
-    println!("Approximating PI using {} iterations...", iterations);
+    println!("Approximating PI using {} iterations...\n", iterations);
 
     let c_start = SystemTime::now();
     let pi_c = unsafe { pi_c(iterations) };

@@ -18,23 +18,29 @@ It should be es simple as ```cargo run``` in the root folder of this project. If
 Rust and C are both compiled with optimization level 3 (rust is configured in the Cargo.toml, C in the build.rs), x86_64 of course without any optimization. This output was generated on my pc using Arch Linux (btw.) with my Intel(R) Core(TM) i5-6600K CPU @ 3.50GHz. If you think "Man, isn't that CPU a little old?" shut the fuck up, I love him, okay? It's complicated. If you weren't thinking that, I see, you're a man of povery as well. Where was I? Ah, yeah, example output:
 
 ```
-$ cargo run   Compiling pi_benchmarks v0.1.0 (/home/***/programming/rust/pi_benchmarks)
-    Finished dev [optimized + debuginfo] target(s) in 0.26s
+$ cargo run
+   Compiling pi_benchmarks v0.1.0 (/home/***/programming/rust/pi_benchmarks)
+    Finished dev [optimized + debuginfo] target(s) in 0.30s
      Running `target/debug/pi_benchmarks`
+System info:
+CPU:    Intel(R) Core(TM) i5-6600K CPU @ 3.50GHz
+OS:     linux
+
 Approximating PI using 1000000000 iterations...
+
 --- C ---
-start: 2022-02-02T17:44:17.181035722Z
-duration: 2s 891ms 860us 767ns
+start: 2022-02-02T21:42:18.303293148Z
+duration: 2s 843ms 270us 767ns
 result: 3.141592653589787
 
 --- x86_64 ---
-start: 2022-02-02T17:44:20.072913651Z
-duration: 7s 51ms 300us 760ns
+start: 2022-02-02T21:42:21.146585787Z
+duration: 7s 19ms 14us 392ns
 result: 3.141592653589787
 
 --- Rust ---
-start: 2022-02-02T17:44:27.124226552Z
-duration: 2s 525ms 159us 216ns
+start: 2022-02-02T21:42:28.165616117Z
+duration: 2s 471ms 791us 951ns
 result: 3.141592653589787
 ```
 
