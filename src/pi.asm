@@ -23,10 +23,8 @@ loop:
     je endloop
 
     movsd xmm2, [divi]      ; multiply dividents
-    movsd xmm3, [divi + 8]
-    movsd xmm4, [divi + 16]
-    mulsd xmm2, xmm3
-    mulsd xmm2, xmm4
+    mulsd xmm2, [divi + 8]
+    mulsd xmm2, [divi + 16]
 
     movsd xmm1, [quot]      ; divide quotient by product of dividents
     divsd xmm1, xmm2
